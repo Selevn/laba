@@ -1,0 +1,17 @@
+{{#if isAdd}}
+<ul>
+
+    {{#each data}}
+        <li>
+        <button disabled type="submit">{{name}} - {{phone}}</button>
+        </li>
+    {{/each}}
+
+{{else}}
+    {{#each data}}
+        <li>
+            <button onclick="window.location.href = '/update?name={{name}}'">{{name}} - {{phone}}</button>
+        </li>
+    {{/each}}
+{{/if}}
+</ul>

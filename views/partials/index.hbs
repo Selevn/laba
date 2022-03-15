@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>{{title}}</title>
+    <meta charset="utf-8" />
+</head>
+<body>
+table:
+{{>table}}
+{{#if isAdd}}
+    {{>add}}
+{{/if}}
+{{#if isBase}}
+    <a href="/add"> ADD </a>
+{{/if}}
+{{#if isUpdate}}
+    {{>update}}
+{{/if}}
+</body>
+<html>

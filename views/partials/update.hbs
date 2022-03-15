@@ -1,0 +1,18 @@
+<form method="post" action="/update">
+    <input style="display: none" name="prevName" value="{{item.name}}">
+    <input id="inp" type="text" placeholder="FIO" name="name" value="{{item.name}}"/>
+    <input type="text" placeholder="Phone" name="phone" value="{{item.phone}}"/>
+    <input type="submit" value="Update">
+</form>
+<form method="post" action="/delete">
+    <input style="display: none" name="name" value="{{item.name}}">
+    <input id="qwer" type="submit" value="Delete">
+</form>
+{{#back}}{{/back}}
+<script>
+    const selectElement = document.querySelector('#inp');
+    selectElement.addEventListener('input', (event) => {
+        document.querySelector('#qwer').disabled = true;
+
+    });
+</script>
